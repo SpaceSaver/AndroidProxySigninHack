@@ -7,7 +7,7 @@ function main() {
 	    //console.log(req.url);
 	    console.log("Serving HTTP request");
 	    if (req.url === "http://connectivitycheck.gstatic.com/generate_204" || !req.url || !(req.url.startsWith("https://") || req.url.startsWith("http://"))) {
-	        res.writeHead(301, { Location: "https://www.google.com" });
+	        res.writeHead(302, { Location: "https://www.google.com" });
 	        res.write("That's not where you want to go!");
 	        res.end();
 	    }
